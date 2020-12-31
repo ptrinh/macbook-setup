@@ -22,3 +22,5 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 
 cd Downloads
 curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors
+curl -O https://dl.google.com/go/go1.16beta1.darwin-arm64.pkg
+sudo installer -verboseR -pkg "go1.16beta1.darwin-arm64.pkg"
