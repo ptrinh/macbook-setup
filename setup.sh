@@ -11,7 +11,7 @@ brew install --cask google-chrome iterm2 folx dropbox adobe-acrobat-reader textm
 # utils
 brew install --cask little-snitch istat-menus clipy grandperspective ipartition itsycal spectacle vipriser cd-to blackhole-2ch osxfuse handbrake
 # dev tools
-brew install --cask oracle-jdk docker sequel-pro ledger-live visual-studio-code goland phpstorm tunnelblick dosbox-x postman wireshark altserver
+brew install --cask oracle-jdk docker sequel-pro ledger-live visual-studio-code goland phpstorm tunnelblick dosbox-x postman wireshark altserver ifunbox
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
