@@ -17,6 +17,9 @@ brew install --cask oracle-jdk docker sequel-pro ledger-live visual-studio-code 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
+# default-writes
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ptrinh/macbook-setup/main/default-writes.sh)"
+
 cd Downloads
 curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors
 curl -O https://dl.google.com/go/go1.16beta1.darwin-arm64.pkg
