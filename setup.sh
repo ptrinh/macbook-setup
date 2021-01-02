@@ -20,21 +20,17 @@ brew install --cask little-snitch istat-menus clipy grandperspective ipartition 
 echo Installing dev tools...
 brew install --cask oracle-jdk docker sequel-pro ledger-live visual-studio-code goland phpstorm tunnelblick dosbox-x postman wireshark altserver ifunbox fork expandrive
 
-# oh-my-zsh
-echo Installing Oh-my-zsh...
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-
 # default-writes
 echo Setting default-writes...
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ptrinh/macbook-setup/main/default-writes.sh)"
 
 cd Downloads
-echo Install golang 1.6beta...
-curl -O https://dl.google.com/go/go1.16beta1.darwin-arm64.pkg
-sudo installer -verboseR -pkg "go1.16beta1.darwin-arm64.pkg"
-
 curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors
+
+# oh-my-zsh
+echo Installing Oh-my-zsh...
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 echo Next step: Copy dotfiles to home directory
 
