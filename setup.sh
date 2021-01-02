@@ -24,3 +24,8 @@ cd Downloads
 curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors
 curl -O https://dl.google.com/go/go1.16beta1.darwin-arm64.pkg
 sudo installer -verboseR -pkg "go1.16beta1.darwin-arm64.pkg"
+
+
+
+# To upgrade all softwares installed by cask later, just run this below command:
+# brew upgrade --cask --greedy
