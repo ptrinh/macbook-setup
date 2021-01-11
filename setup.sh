@@ -12,7 +12,7 @@ brew install git ruby node npm protobuf redis mysql@5.7 rabbitmq mercurial wget 
 
 # apps
 echo Installing desktop apps...
-brew install --cask google-chrome iterm2 folx dropbox adobe-acrobat-reader textmate skype slack firefox vlc zoom viber microsoft-edge openemu anydesk
+brew install --cask google-chrome iterm2 folx dropbox adobe-acrobat-reader textmate skype slack firefox vlc zoom viber microsoft-edge openemu anydesk microsoft-office
 # utils
 echo Installing utilities...
 brew install --cask little-snitch istat-menus clipy grandperspective ipartition spectacle vipriser cd-to blackhole-2ch osxfuse handbrake the-unarchiver textbar adguard app-tamer
