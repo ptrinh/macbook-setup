@@ -22,7 +22,7 @@ brew install --cask oracle-jdk docker sequel-pro ledger-live visual-studio-code 
 
 # default-writes
 echo Setting default-writes...
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ptrinh/macbook-setup/main/default-writes.sh)"
+sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ptrinh/macbook-setup/main/default-writes.sh)"
 
 cd Downloads
 curl -O https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors
