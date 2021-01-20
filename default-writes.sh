@@ -47,9 +47,25 @@ defaults write NSGlobalDomain InitialKeyRepeat -float 10.0
 defaults write NSGlobalDomain KeyRepeat -float 1.0
 defaults write -g KeyRepeat -float 1.0
 
+# UTF-8 Terminal
+defaults write com.apple.terminal StringEncodings -array 4
+
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Expand save/print panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# Enable spring loading for directories
+defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+
+# Enable Safari debug menu
+defaults write com.apple.Safari IncludeDebugMenu 1
 
 ###############################################################################
 # Screen                                                                      #
@@ -57,7 +73,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+defaults write com.apple.screensaver askForPasswordDelay -int 5
 
 ###############################################################################
 # Finder                                                                      #
