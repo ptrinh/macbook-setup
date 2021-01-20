@@ -10,6 +10,12 @@ sudo scutil --set ComputerName "PhilMac"
 sudo scutil --set HostName "PhilMac"
 sudo scutil --set LocalHostName "PhilMac"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "PhilMac"
+
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Please call me for urgent access."
+
+# Change login screen background
+# sudo defaults write /Library/Preferences/com.apple.loginwindow DesktopPicture "/Library/Desktop Pictures/Aqua Blue.jpg"
+
 # dscacheutil -flushcache
 
 # Disable the sound effects on boot
@@ -17,7 +23,7 @@ sudo nvram SystemAudioVolume=" "
 sudo nvram StartupMute=%01
 
 # Disable transparency in the menu bar and elsewhere
-# defaults write com.apple.universalaccess reduceTransparency -bool true
+defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
@@ -204,8 +210,9 @@ defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 # Tweak the spring loading delay for directories
 defaults write NSGlobalDomain com.apple.springing.delay -float .5
 
-# Avoid creating .DS_Store files on network volumes
+# Avoid creating .DS_Store files on network volumes and USB drives
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
@@ -478,6 +485,9 @@ defaults write com.apple.TextEdit "TabWidth" '4'
 # Enable the debug menu in Disk Utility
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.DiskUtility advanced-image-options -bool true
+
+# Show hidden partitions
+defaults write com.apple.DiskUtility DUShowEveryPartition -bool true
 
 #################
 # Mac app store #
