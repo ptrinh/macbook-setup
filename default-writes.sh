@@ -41,8 +41,7 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
-defaults write NSGlobalDomain KeyRepeat -int 0
-
+defaults write NSGlobalDomain KeyRepeat -int 0.02
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
