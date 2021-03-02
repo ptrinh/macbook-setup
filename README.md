@@ -8,3 +8,5 @@ Usage:
 To upgrade all softwares installed by cask later, just run this below command:
 
 ```brew upgrade --cask --greedy```
+
+To install Docker, you will need to manually download the Tech Preview version at: https://docs.docker.com/docker-for-mac/apple-m1/
