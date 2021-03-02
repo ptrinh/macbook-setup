@@ -8,7 +8,7 @@ export PATH=/opt/homebrew/bin:$PATH
 brew update
 
 echo Installing basic homebrew softwares...
-brew install git ruby node npm protobuf redis mysql@5.7 rabbitmq mercurial wget php zsh htop go
+brew install git php ruby node npm protobuf redis mysql rabbitmq mercurial wget zsh htop go
 
 # apps
 echo Installing desktop apps...
