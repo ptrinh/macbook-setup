@@ -8,7 +8,7 @@ export PATH=/opt/homebrew/bin:$PATH
 brew update
 
 echo Installing basic homebrew softwares...
-brew install git php ruby node npm protobuf redis mysql rabbitmq mercurial wget zsh htop go
+brew install git php ruby node npm protobuf redis mysql rabbitmq mercurial wget zsh htop go mackup
 
 # apps
 echo Installing desktop apps...
@@ -32,7 +32,7 @@ echo Installing Oh-my-zsh...
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
-echo Next step: Copy dotfiles to home directory
+echo "Next step: Sync Dropbox then use 'mackup restore' to restore dot files and other configurations"
 
 # To upgrade all softwares installed by cask later, just run this below command:
 # brew upgrade --cask --greedy
