@@ -6,12 +6,12 @@
 ##########################
 
 # Set hostname
-sudo scutil --set ComputerName "PhilMac"
-sudo scutil --set HostName "PhilMac"
-sudo scutil --set LocalHostName "PhilMac"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "PhilMac"
+# sudo scutil --set ComputerName "PhilMac"
+# sudo scutil --set HostName "PhilMac"
+# sudo scutil --set LocalHostName "PhilMac"
+# sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "PhilMac"
 
-sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Please call me for urgent access."
+# sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Please call me for urgent access."
 
 # Change login screen background
 # sudo defaults write /Library/Preferences/com.apple.loginwindow DesktopPicture "/Library/Desktop Pictures/Aqua Blue.jpg"
