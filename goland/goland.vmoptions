@@ -1,0 +1,4 @@
+# ~/Library/Application Support/JetBrains/GoLand2021.3/goland.vmoptions
+
+-Xmx1400m
+-XX:+UseG1GC
