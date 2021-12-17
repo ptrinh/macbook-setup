@@ -4,7 +4,7 @@
 -Xms256m
 -Xmx1500m
 -Xss64m
--XX:ReservedCodeCacheSize=128m
+-XX:ReservedCodeCacheSize=256m
 -XX:+UseCompressedOops
 -XX:NewRatio=2
 -Dfile.encoding=UTF-8
