@@ -18,6 +18,9 @@
 
 # dscacheutil -flushcache
 
+# sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticCheckEnabled -bool FALSE
+
+
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 sudo nvram StartupMute=%01
@@ -27,6 +30,13 @@ defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Speed up the animation when opening Quick Look windows
+defaults write -g QLPanelAnimationDuration -float 0.2
+
+# Disable the “reopen windows when logging back in” option
+defaults write com.apple.loginwindow TALLogoutSavesState -bool false
+defaults write com.apple.loginwindow LoginwindowLaunchesRelaunchApps -bool false
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -61,6 +71,10 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # Disable opening and closing window animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
+# Disable Mail app animations
+defaults write com.apple.mail DisableReplyAnimations -bool true
+defaults write com.apple.mail DisableSendAnimations -bool true
+
 # Disable Resume system-wide
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
@@ -74,6 +88,10 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 0
 
+sudo systemsetup -setsleep Off
+sudo rm /var/vm/sleepimage
+sudo mkdir /var/vm/sleepimage
+sudo tmutil disablelocal
 # Remove the sleep image file to save disk space
 sudo rm -f /private/var/vm/sleepimage
 # Create a zero-byte file instead…
@@ -110,8 +128,8 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write -g InitialKeyRepeat -float 10.0
 defaults write NSGlobalDomain InitialKeyRepeat -float 10.0
 # normal minimum is 2 (30 ms)
-defaults write NSGlobalDomain KeyRepeat -float 0.5
-defaults write -g KeyRepeat -float 0.5
+defaults write NSGlobalDomain KeyRepeat -float 1
+defaults write -g KeyRepeat -float 1
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
@@ -196,7 +214,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Display full POSIX path as Finder window title
-# defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
@@ -274,7 +292,7 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 # defaults write com.apple.dock expose-group-by-app -bool false
 
 # Disable Dashboard
-#defaults write com.apple.dashboard mcx-disabled -bool true
+defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Don’t show Dashboard as a Space
 # defaults write com.apple.dock dashboard-in-overlay -bool true
@@ -285,7 +303,7 @@ defaults write com.apple.dock mru-spaces -bool false
 # Remove the auto-hiding Dock delay
 # defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
-# defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Automatically hide and show the Dock
 # defaults write com.apple.dock autohide -bool true
